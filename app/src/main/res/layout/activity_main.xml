@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    android:id="@+id/main"
+    android:background="@drawable/main_background">
+
+
+    <ImageView
+        android:id="@+id/avatarIcon"
+        android:layout_width="116dp"
+        android:layout_height="116dp"
+        android:src="@drawable/ic_photo"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dp"
+        android:scaleType="centerInside" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/identity_Name"
+        android:layout_marginStart="40dp"
+        android:layout_gravity="start"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:boxBackgroundColor="@color/white"
+        android:hint="@string/edt_name">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextName"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:background="@drawable/edit_text2"
+            android:inputType="textPersonName"
+            android:textSize="14sp"
+            android:padding="16dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/identity_Palindrome"
+        android:layout_marginStart="40dp"
+        android:layout_gravity="start"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        app:boxBackgroundColor="@color/white"
+        android:hint="@string/edt_Palindrome">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextPalindrome"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:inputType="text"
+            android:textSize="14sp"
+            android:background="@drawable/edit_text2"
+            android:padding="16dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonCheck"
+        android:layout_width="310dp"
+        android:layout_height="48dp"
+        android:text="@string/tv_btn_checkPalindrome"
+        android:background="@drawable/button"
+        android:textColor="@android:color/white"
+        app:backgroundTint="@color/green"
+        android:layout_marginBottom="16dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonNext"
+        android:layout_width="310dp"
+        android:layout_height="48dp"
+        app:backgroundTint="@color/green"
+        android:text="@string/tv_btn_nextPage"
+        android:background="@drawable/button"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>

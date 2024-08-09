@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">App-TestMobile-Suitmedia</string>
+    <string name="back">Back</string>
+    <string name="avatar_user">Avatar</string>
+    <string name="firstName">FirstName</string>
+    <string name="user_Email">yuzzar@gmail.com</string>
+    <string name="identity_Name">Name</string>
+    <string name="edt_name">Type Your Name</string>
+    <string name="identity_Palindrome">Palindrome</string>
+    <string name="edt_Palindrome">Type Your Palindrome</string>
+    <string name="tv_btn_checkPalindrome">Check</string>
+    <string name="tv_btn_nextPage">Next</string>
+    <string name="Title_screen">Second Screen</string>
+    <string name="username">John Doe</string>
+</resources>
