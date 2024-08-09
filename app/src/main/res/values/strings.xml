@@ -12,4 +12,5 @@
     <string name="tv_btn_nextPage">Next</string>
     <string name="Title_screen">Second Screen</string>
     <string name="username">John Doe</string>
+    <string name="edt_palindrome">palindrome</string>
 </resources>
