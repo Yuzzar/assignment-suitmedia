@@ -10,10 +10,6 @@ class SecondScreen : AppCompatActivity() {
 
     private lateinit var binding: ActivitySecondScreenBinding
 
-    companion object {
-        private const val REQUEST_CODE_USER_SELECTION = 1
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySecondScreenBinding.inflate(layoutInflater)
@@ -45,4 +41,10 @@ class SecondScreen : AppCompatActivity() {
     private fun updateSelectedUser(userName: String) {
         binding.selectedUserLabel.text = userName
     }
+
+    companion object {
+        private const val REQUEST_CODE_USER_SELECTION = 1
+    }
 }
+
+
