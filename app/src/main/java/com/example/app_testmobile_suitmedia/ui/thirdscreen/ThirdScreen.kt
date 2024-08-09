@@ -6,11 +6,11 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.app_testmobile_suitmedia.data.adapter.UserAdapter
 import com.example.app_testmobile_suitmedia.data.api.ApiConfig
 import com.example.app_testmobile_suitmedia.data.response.DataItem
 import com.example.app_testmobile_suitmedia.data.response.UserResponse
 import com.example.app_testmobile_suitmedia.databinding.ActivityThirdScreenBinding
-import com.example.app_testmobile_suitmedia.ui.adapter.UserAdapter
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -29,8 +29,11 @@ class ThirdScreen : AppCompatActivity() {
         binding = ActivityThirdScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.toolbar.setNavigationOnClickListener {
+            onBackPressed()
+        }
+
         userAdapter = UserAdapter(users) { user ->
-            // Handle user click
             val intent = Intent().apply {
                 putExtra("SELECTED_USER_NAME", "${user.firstName} ${user.lastName}")
             }
@@ -60,6 +63,8 @@ class ThirdScreen : AppCompatActivity() {
 
     private fun loadUsers() {
         isLoading = true
+        binding.progressBar.visibility = android.view.View.VISIBLE
+
         ApiConfig().getApiService().getUsers(currentPage, 10).enqueue(object : Callback<UserResponse> {
             override fun onResponse(call: Call<UserResponse>, response: Response<UserResponse>) {
                 if (response.isSuccessful) {
@@ -73,13 +78,14 @@ class ThirdScreen : AppCompatActivity() {
                     }
                 }
                 isLoading = false
+                binding.progressBar.visibility = android.view.View.GONE
                 binding.swipeRefreshLayout.isRefreshing = false
             }
 
             override fun onFailure(call: Call<UserResponse>, t: Throwable) {
                 isLoading = false
+                binding.progressBar.visibility = android.view.View.GONE
                 binding.swipeRefreshLayout.isRefreshing = false
-
             }
         })
     }

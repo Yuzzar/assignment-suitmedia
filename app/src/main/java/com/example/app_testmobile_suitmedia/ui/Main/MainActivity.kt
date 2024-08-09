@@ -67,7 +67,7 @@ class MainActivity : AppCompatActivity() {
             override fun afterTextChanged(s: Editable?) {}
         })
 
-        // Hide hint for Palindrome EditText
+
         editTextPalindrome.setOnFocusChangeListener { v, hasFocus ->
             if (hasFocus) {
                 if (!editTextPalindrome.text.isNullOrEmpty()) {

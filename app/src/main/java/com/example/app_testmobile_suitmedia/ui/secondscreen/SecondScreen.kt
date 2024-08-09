@@ -19,6 +19,10 @@ class SecondScreen : AppCompatActivity() {
         binding = ActivitySecondScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.toolbar.setNavigationOnClickListener {
+            onBackPressed()
+        }
+
         val username = intent.getStringExtra("USER_NAME") ?: "Default User"
         binding.usernameText.text = username
 

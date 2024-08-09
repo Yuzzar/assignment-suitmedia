@@ -1,4 +1,4 @@
-package com.example.app_testmobile_suitmedia.ui.adapter
+package com.example.app_testmobile_suitmedia.data.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -26,16 +26,6 @@ class UserAdapter(private val users: MutableList<DataItem>, private val onUserCl
 
     override fun getItemCount(): Int = users.size
 
-    fun addUsers(newUsers: List<DataItem>) {
-        val startPosition = users.size
-        users.addAll(newUsers)
-        notifyItemRangeInserted(startPosition, newUsers.size)
-    }
-
-    fun clearUsers() {
-        users.clear()
-        notifyDataSetChanged()
-    }
 
     class UserViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val avatarImageView: ImageView = itemView.findViewById(R.id.icon_History)
