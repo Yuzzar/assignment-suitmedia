@@ -1,10 +1,11 @@
-package com.example.app_testmobile_suitmedia.ui
+package com.example.app_testmobile_suitmedia.ui.Main
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.app_testmobile_suitmedia.databinding.ActivityMainBinding
+import com.example.app_testmobile_suitmedia.ui.secondscreen.SecondScreen
 
 
 class MainActivity : AppCompatActivity() {

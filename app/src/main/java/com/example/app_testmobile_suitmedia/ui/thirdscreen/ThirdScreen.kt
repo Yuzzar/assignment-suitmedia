@@ -1,4 +1,4 @@
-package com.example.app_testmobile_suitmedia.ui
+package com.example.app_testmobile_suitmedia.ui.thirdscreen
 
 import android.app.Activity
 import android.content.Intent
